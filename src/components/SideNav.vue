@@ -1,21 +1,27 @@
 <template>
-    <aside class="sidenav">
-        <ul>
+    <aside class="sidenav ">
+        <ul >
             <li>
-                <router-link to="/">
-                    <span>Home</span>
+                <div class="col-11 link-container p-2">
+                     <router-link  class="col-12" to="/">
+                    <BIconHouseDoor class="icon" /><span>Home</span>
                 </router-link>
+                </div>
+               
             </li>
             <li>
-                <router-link to="/billing">
-                    <span>Billing</span>
-                </router-link>
+                <div class="col-11 link-container p-2">
+                    <router-link to="/billing">
+                    <BIconCreditCard class="icon"/> <span>Billing</span>
+                    </router-link>
+                </div>
             </li>
         </ul>
     </aside>
 </template>
 
 <style scoped>
+
 
     ul {
         list-style: none;
@@ -25,14 +31,28 @@
         text-decoration: none; 
     }
 
-    a:hover {
+    .link-container:hover {
         background-color: #1F8CEB;
     }
 
     .sidenav {
         height: 100%;
-        width: 20%;
-        position: fixed;
-        left: 0;
+        /* width: 15%; */
+        /* position: fixed; */
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid;
+        border-color: #394455;
     }
 </style>
+
+<script>
+import { BIconHouseDoor, BIconCreditCard } from 'bootstrap-icons-vue'
+
+export default {
+    components: {
+        BIconHouseDoor, 
+        BIconCreditCard
+    }
+}
+</script>
