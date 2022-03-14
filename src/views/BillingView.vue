@@ -9,7 +9,7 @@
         <div class="account-list row">
             
             <UserCard 
-            class="card col-3 m-2"
+            class="card col-12 col-md-3 m-2"
             v-for="(account, index) in users"
             :user="account"
             :key="index"
@@ -19,13 +19,13 @@
     </div>
     <hr/>
     <div class="row">
-        <div class="col-8">
+        <div class="col-12 col-md-8">
             <PaymentDetails
                 :currentUser="currentUser"
                 :formatDate="formatDate"
              />
         </div>
-        <div class="col-4">
+        <div class="col-12 col-md-4">
             <MyProducts
             :products="currentUser.products" />
         </div>

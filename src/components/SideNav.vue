@@ -1,5 +1,5 @@
 <template>
-    <aside class="sidenav ">
+    <aside :class="showSidebar ? 'd-block': 'd-none' " class="sidenav d-md-block">
         <ul >
             <li>
                 <div class="col-11 link-container p-2">
@@ -21,7 +21,6 @@
 </template>
 
 <style scoped>
-
 
     ul {
         list-style: none;
@@ -50,6 +49,7 @@
 import { BIconHouseDoor, BIconCreditCard } from 'bootstrap-icons-vue'
 
 export default {
+    props:['showSidebar'],
     components: {
         BIconHouseDoor, 
         BIconCreditCard

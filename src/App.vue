@@ -1,16 +1,20 @@
 <template>
 <div class="container-fluid">
   <div class="row">
-    <HeaderItem class="py-2"/>
+    <HeaderItem 
+    class="pt-2"
+    :toggleSidebar="toggleSidebar"/>
   </div>
   <hr />
   
   <div class="row">
     <div class="col-2">
-      <SideNav class="mt-2"/>
+      <SideNav 
+      class="mt-2"
+      :showSidebar="showSidebar"/>
     </div>
     
-  <div class="col-10">
+  <div class="col-12 col-md-10">
       <router-view 
       :users="users" 
       :selectAccount="selectAccount"
@@ -46,12 +50,17 @@ export default {
         this.currentUser = userData.find(each => this.isUser(each, accountId));
         console.log(accountId)
         console.log(this.currentUser); 
+    },
+    toggleSidebar(){
+      this.showSidebar = !this.showSidebar
+      console.log(this.showSidebar)
     }
   },
   data () {
     return {
       users: userData,
-      currentUser: userData[0]
+      currentUser: userData[0],
+      showSidebar:false
     }
   }
 }

@@ -11,7 +11,7 @@
             <h6>Next invoice: {{formatDate(currentUser.next_invoice_date)}}</h6>
 
             <div class="row">
-                <div class="col-5 p-3 light-grey rounded ms-4 me-4">
+                <div class="col-12 col-md-5 p-3 light-grey rounded ms-md-4 me-md-4">
                     <h6>Current balance</h6>
                     <h3> £{{currentUser.balance}}</h3>
                     <div class="row">
@@ -26,7 +26,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-5 p-3 light-grey">
+                <div class="col-12 col-md-5 p-3 mt-2 mt-md-0 light-grey">
                     <h6>Payment method 
                         <span class="badge badge-secondary text-dark">Annual</span>
                     </h6>

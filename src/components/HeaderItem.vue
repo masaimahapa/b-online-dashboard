@@ -1,8 +1,12 @@
 <template>
    <div class="row flex justify-content-between">
-       <div class="col-9">
+       
+       <div class="col-12 col-md-8">
            <div class="row flex justify-content-between">
-               <div class="col-3">
+               <div class="col-md-3 col-6">
+                   <button class="btn" @click="toggleSidebar">
+                       <BIconList class="d-inline d-md-none icon me-2 me-md-0" />
+                   </button>    
                    <span class="fs-4">bOnline</span>
                </div>
                <div class="col-2">
@@ -14,9 +18,9 @@
        </div>
        
 
-        <div class="col-3">
+        <div class="col-12 col-md-4">
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 col-md-3">
                     <img 
                     src="../assets/masai.jpg"
                     class="rounded-circle img-fluid"
@@ -24,13 +28,13 @@
 
                     />
                 </div>
-                <div class="col-8">
-                    <span class="fs-5">First LastName</span>
+                <div class="col-8 col-md-7">
+                    <span class="fs-6 fs-md-5">First LastName</span>
                     <p>firstlastname@bonline.com</p>
                     
                 </div>
-                <div class="col-1">
-                    <BIconChevronDown class="mt-4"/>
+                <div class="col-1 col-md-1">
+                    <BIconChevronDown class="mt-lg-4"/>
                 </div>
             </div>
             
@@ -49,12 +53,14 @@
 </style>
 
 <script>
-import { BIconBell, BIconChevronDown} from 'bootstrap-icons-vue'
+import { BIconBell, BIconChevronDown, BIconList} from 'bootstrap-icons-vue'
 
 export default {
+    props:['toggleSidebar'],
     components: {
         BIconBell,
-        BIconChevronDown
+        BIconChevronDown,
+        BIconList
     }
 }
 </script>
