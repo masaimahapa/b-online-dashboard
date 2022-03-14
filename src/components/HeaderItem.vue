@@ -4,8 +4,8 @@
        <div class="col-12 col-md-8">
            <div class="row flex justify-content-between">
                <div class="col-md-3 col-6">
-                   <button class="btn" @click="toggleSidebar">
-                       <BIconList class="d-inline d-md-none icon me-2 me-md-0" />
+                   <button class="btn d-inline d-md-none" @click="toggleSidebar">
+                       <BIconList class=" icon me-2 me-md-0" />
                    </button>    
                    <span class="fs-4">bOnline</span>
                </div>
@@ -20,7 +20,7 @@
 
         <div class="col-12 col-md-4">
             <div class="row">
-                <div class="col-3 col-md-3">
+                <div class="col-2 col-md-2">
                     <img 
                     src="../assets/masai.jpg"
                     class="rounded-circle img-fluid"
@@ -42,15 +42,6 @@
     </div>
 </template>
 
-<style scoped>
-    .header {
-        position: fixed;
-        top: 0;
-        left:0;
-        right: 0;
-        margin: 20px;
-    }
-</style>
 
 <script>
 import { BIconBell, BIconChevronDown, BIconList} from 'bootstrap-icons-vue'

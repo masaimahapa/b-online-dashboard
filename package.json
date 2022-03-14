@@ -12,6 +12,8 @@
     "bootstrap-icons-vue": "^0.8.0",
     "core-js": "^3.8.3",
     "moment": "^2.29.1",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
     "vue": "^3.2.31",
     "vue-router": "^4.0.13"
   },

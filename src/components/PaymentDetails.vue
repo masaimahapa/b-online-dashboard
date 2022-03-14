@@ -21,7 +21,7 @@
                         <div class="col-10">
                             <p>This is a secure 256-bit SSL encrypted payment. You're safe.</p>
                         </div>
-                        <button class="btn bg-primary col-5 text-white ms-2">
+                        <button class="btn col-5 text-white ms-2 custom-button">
                             Pay Now
                         </button>
                     </div>
@@ -39,7 +39,7 @@
                             Guide: To manage your payments more easily, we recommend switching to Direct Debit.
                         </p>
                     </div>
-                    <button class="btn col-8 bg-primary text-white ms-2">
+                    <button class="btn custom-button col-8 text-white ms-2">
                             Switch to Direct Debit
                         </button>
                     </div>

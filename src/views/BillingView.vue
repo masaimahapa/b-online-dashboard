@@ -14,6 +14,7 @@
             :user="account"
             :key="index"
             :selectAccount="selectAccount"
+            :isTheCurrentUser="currentUser.account_id===account.account_id"
             />
         </div>
     </div>
@@ -65,17 +66,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-    /* .card {
-        width: 130px;
-        margin: 10px;
-    }  */
-    .account-list {
-        display: inline-block;
-        display: flex;
-        justify-content:flex-start;
-        
-
-    }
-</style>

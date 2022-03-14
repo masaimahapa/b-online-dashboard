@@ -8,23 +8,23 @@
   <hr />
   
   <div class="row">
-    <div class="col-2">
+    <div class="col-6 col-md-2">
       <SideNav 
-      class="mt-2"
-      :showSidebar="showSidebar"/>
+      class="mt-md-2"
+      :showSidebar="showSidebar"
+      :currentRouteName="currentRouteName"
+      :toggleSidebar="toggleSidebar"
+      />
     </div>
     
-  <div class="col-12 col-md-10">
+  <div :class="showSidebar ? 'col-10 offset-2': 'col-12'" class="offset-md-3 col-md-9">
       <router-view 
       :users="users" 
       :selectAccount="selectAccount"
       :currentUser="currentUser"/>
   </div>
   </div>
-  
 </div>
-
-
 
 </template>
 
@@ -48,12 +48,14 @@ export default {
     },
      selectAccount(accountId) {
         this.currentUser = userData.find(each => this.isUser(each, accountId));
-        console.log(accountId)
-        console.log(this.currentUser); 
     },
     toggleSidebar(){
       this.showSidebar = !this.showSidebar
-      console.log(this.showSidebar)
+    }
+  },
+  computed: {
+    currentRouteName(){
+      return this.$route.name;
     }
   },
   data () {
@@ -65,28 +67,3 @@ export default {
   }
 }
 </script>
-
-
-
-
-
-
-<style>
-#app {
-  color: #2c3e50;
-}
- .light-grey {
-        background-color: #eaeef3;
-    }
-      .icon {
-        font-size: 30px;
-    }
-
-
-    .page {
-        /* text-align: center; */
-        /* margin-left:10%;
-        margin-top: 50px; */
-    }
-
-</style>
